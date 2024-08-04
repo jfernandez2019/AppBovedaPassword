@@ -54,7 +54,7 @@ class _PasswordListScreenState extends State<PasswordListScreen> {
           child: Text(
             password,
             style: TextStyle(
-              fontSize: 24, // Tamaño del texto aumentado
+              fontSize: 18, // Tamaño del texto aumentado
               fontWeight: FontWeight.bold, // Opcional: para hacer el texto en negrita
               color: Colors.black87,
             ),
@@ -83,7 +83,10 @@ class _PasswordListScreenState extends State<PasswordListScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Bóveda de contraseñas'),
+        title: const Text(
+          'Bóveda de contraseñas',
+          style: TextStyle(color: Colors.white), // Establece el color del texto a blanco
+        ),
         backgroundColor: Colors.teal,
         elevation: 4,
       ),
@@ -139,8 +142,11 @@ class _PasswordListScreenState extends State<PasswordListScreen> {
             _loadPasswords();
           }
         },
-        child: const Icon(Icons.add),
+        child: const Icon(
+          Icons.add,
+          color: Colors.white, // Cambia el color del icono),
       ),
-    );
+      backgroundColor: Colors.teal,
+    ));
   }
 }
